@@ -1,0 +1,79 @@
+/* Estilos exclusivos da página Serviços */
+
+.grid-services {
+
+  display: grid;
+
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+
+  gap: 24px;
+
+  margin-bottom: 48px;
+
+}
+
+.service-card {
+
+  background: #fff;
+
+  padding: 36px 28px;
+
+  border: 1px solid var(--border);
+
+  position: relative;
+
+  transition: all .3s ease;
+
+  cursor: default;
+
+}
+
+.service-card::before {
+
+  content: "";
+
+  position: absolute;
+
+  top: 0;
+
+  left: 0;
+
+  width: 4px;
+
+  height: 0;
+
+  background: var(--gold);
+
+  transition: height .3s ease;
+
+}
+
+.service-card:hover {
+
+  transform: translateY(-4px);
+
+  box-shadow: var(--shadow-lg);
+
+}
+
+.service-card:hover::before {
+
+  height: 100%;
+
+}
+
+.service-card h3 {
+
+  color: var(--navy-900);
+
+  margin-bottom: .6em;
+
+}
+
+.service-card p {
+
+  color: var(--muted);
+
+  margin: 0;
+
+}
